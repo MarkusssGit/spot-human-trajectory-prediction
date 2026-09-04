@@ -1,12 +1,14 @@
 # Human Trajectory Prediction for Boston Dynamics Spot
-Original project repository: https://github.com/harshaguda/spot-human-trajectory-prediction
+Aalto University team project with the Boston Dynamics Spot robot on socially compliant robot navigation.
 
-Aalto University team project on socially compliant robot navigation.
+Original team repository: https://github.com/harshaguda/spot-human-trajectory-prediction
 
-I implemented the human trajectory component for the project. This included using an Extended Kalman Filter (EKF) to estimate the true state of the humans and forming a "danger zone" which considers most probable actions said human can make. 
+## My contribution
+
+I implemented the ROS2 human trajectory-prediction component in Python. An Extended Kalman Filter (EKF) was used to estimate human position and velocity from noisy measurements and predict future motion. The predicted state was then used to generate a "danger zone" representing likely future positions of the tracked person.
 
 My contribution can be found in this directory from the project: https://github.com/harshaguda/spot-human-trajectory-prediction/tree/main/ros2_ws/src/human_trajectory_prediction/human_trajectory_prediction
 
-- `danger_zone_publisher.py`
-- `listener_node.py`
-- `prediction_node.py`
+- `prediction_node.py` - EKF state estimation and trajectory prediction
+- `danger_zone_publisher.py` (https://github.com/harshaguda/spot-human-trajectory-prediction/blob/main/ros2_ws/src/human_trajectory_prediction/human_trajectory_prediction/danger_zone_publisher.py) - predicted danger-zone generation
+- `listener_node.py` - ROS2 communication for the prediction component
