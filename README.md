@@ -10,5 +10,5 @@ I implemented the ROS2 human trajectory-prediction component in Python. An Exten
 My contribution can be found in this directory from the project: https://github.com/harshaguda/spot-human-trajectory-prediction/tree/main/ros2_ws/src/human_trajectory_prediction/human_trajectory_prediction
 
 - `prediction_node.py` - EKF state estimation and trajectory prediction
-- `danger_zone_publisher.py` (https://github.com/harshaguda/spot-human-trajectory-prediction/blob/main/ros2_ws/src/human_trajectory_prediction/human_trajectory_prediction/danger_zone_publisher.py) - predicted danger-zone generation
+- `danger_zone_publisher.py` - predicted danger-zone generation
 - `listener_node.py` - ROS2 communication for the prediction component
